@@ -1,12 +1,92 @@
-# React + Vite
+# Cloud Admin Panel - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the frontend interface of the Cloud Admin Panel, a responsive dashboard for scraping and visualizing book data.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Admin login with password protection
+- Trigger backend scraping with a single button
+- Displays live book data (title and price) in a styled table
+- Fully responsive and dark-themed UI
+- Connected to a Node.js backend deployed on Render
 
-## Expanding the ESLint configuration
+## Technology Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js (Vite)
+- Axios
+- HTML5 + CSS3 (inline styles)
+
+## Live Demo
+
+Frontend: [https://cloud-admin-frontend.vercel.app](https://cloud-admin-frontend.vercel.app)  
+Backend: [https://cloud-admin-backend-ff8y.onrender.com](https://cloud-admin-backend-ff8y.onrender.com)
+
+## Admin Login
+
+A static password (`admin123`) is required to access the dashboard.
+
+## Project Structure
+
+```
+cloud-admin-frontend/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── LoginForm.jsx
+│   │   └── Dashboard.jsx
+│   ├── App.jsx
+│   └── main.jsx
+├── .gitignore
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+## Environment Variable
+
+To configure the backend API base URL, create a `.env` file at the root and set:
+
+```
+VITE_API_BASE_URL=https://cloud-admin-backend-ff8y.onrender.com
+```
+
+This is automatically injected during Vercel deployment.
+
+## Deployment
+
+The frontend is deployed on **Vercel**.
+
+**Frontend URL**:  
+[https://cloud-admin-frontend.vercel.app](https://cloud-admin-frontend.vercel.app)
+
+## Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Ayantika-dhar/cloud-admin-frontend.git
+cd cloud-admin-frontend
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run Locally
+
+```bash
+npm run dev
+```
+
+### 4. Build for Production
+
+```bash
+npm run build
+```
+
+## License
+
+This project is intended for educational and demonstration purposes.
+
