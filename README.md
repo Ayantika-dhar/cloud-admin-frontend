@@ -89,4 +89,6 @@ npm run build
 ## License
 
 This project is intended for educational and demonstration purposes.
+Ayantika Dhar
+contact me @ adhar9267@gmail.com
 
